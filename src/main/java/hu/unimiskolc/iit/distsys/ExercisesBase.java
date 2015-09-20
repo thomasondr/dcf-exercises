@@ -20,7 +20,6 @@
  *  
  *  (C) Copyright 2015, Gabor Kecskemeti (kecskemeti@iit.uni-miskolc.hu)
  */
-
 package hu.unimiskolc.iit.distsys;
 
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
