@@ -23,6 +23,9 @@
 
 package hu.unimiskolc.iit.distsys;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import hu.mta.sztaki.lpds.cloud.simulator.Timed;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.unimiskolc.iit.distsys.forwarders.IaaSForwarder;
@@ -41,6 +44,10 @@ public class TestVMCreation {
 		Timed.resetTimed();
 		ExercisesBase.reset();
 		vmc = VMCreatorFactory.createApproachesExercise();
+		
+		new VMCreationClass();
+				
+		System.setProperty("hu.unimiskolc.iit.distsys.VMC", "hu.unimiskolc.iit.distsys.VMCreationClass");
 	}
 
 	@Test(timeout = 100)
