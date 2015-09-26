@@ -45,9 +45,7 @@ public class TestVMCreation {
 		ExercisesBase.reset();
 		vmc = VMCreatorFactory.createApproachesExercise();
 		
-		new VMCreationClass();
 				
-		System.setProperty("hu.unimiskolc.iit.distsys.VMC", "hu.unimiskolc.iit.distsys.VMCreationClass");
 	}
 
 	@Test(timeout = 100)
