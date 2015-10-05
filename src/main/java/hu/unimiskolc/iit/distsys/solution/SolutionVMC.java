@@ -31,7 +31,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.AlterableResourceCons
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.io.VirtualAppliance;
 import hu.unimiskolc.iit.distsys.ExercisesBase;
-import hu.unimiskolc.iit.distsys.VMCreationApproaches;
+import hu.unimiskolc.iit.distsys.interfaces.VMCreationApproaches;
 
 /**
  * This demonstrator class is showing how to fulfill the requirements of
