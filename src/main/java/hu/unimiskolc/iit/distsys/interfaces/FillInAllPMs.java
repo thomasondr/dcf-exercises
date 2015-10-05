@@ -20,16 +20,10 @@
  *  
  *  (C) Copyright 2015, Gabor Kecskemeti (kecskemeti@iit.uni-miskolc.hu)
  */
+package hu.unimiskolc.iit.distsys.interfaces;
 
-package hu.unimiskolc.iit.distsys;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 
-public class VMCreatorFactory {
-	public static VMCreationApproaches createApproachesExercise()
-			throws ClassNotFoundException, InstantiationException,
-			IllegalAccessException {
-		System.setProperty("hu.unimiskolc.iit.distsys.VMC", "hu.unimiskolc.iit.distsys.VMCreationClass");
-		return (VMCreationApproaches) Class.forName(
-				System.getProperty("hu.unimiskolc.iit.distsys.VMC"))
-				.newInstance();
-	}
+public interface FillInAllPMs {
+	void filler(IaaSService iaas, int vmCount);
 }

@@ -30,6 +30,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.Timed;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.unimiskolc.iit.distsys.forwarders.IaaSForwarder;
 import hu.unimiskolc.iit.distsys.forwarders.PMForwarder;
+import hu.unimiskolc.iit.distsys.interfaces.VMCreationApproaches;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -43,9 +44,10 @@ public class TestVMCreation {
 			InstantiationException, IllegalAccessException {
 		Timed.resetTimed();
 		ExercisesBase.reset();
-		vmc = VMCreatorFactory.createApproachesExercise();
-		
-				
+
+		System.setProperty("hu.unimiskolc.iit.distsys.VMC", "hu.unimiskolc.iit.distsys.VMCreationClass");
+		vmc = TestCreatorFactory.createApproachesExercise();
+
 	}
 
 	@Test(timeout = 100)
