@@ -43,11 +43,10 @@ import hu.unimiskolc.iit.distsys.interfaces.CloudProvider;
 
 public class TestPricing implements MultiCloudUser.CompletionCallback {
 	private ArrayList<DeferredEvent> obsolitionEvents = new ArrayList<DeferredEvent>();
-	public static final int totalUserCount = 2;
-	public static final int initialMachineCount = 10;
+	public static final int totalUserCount = 10;
+	public static final int initialMachineCount = 30;
 	private IaaSService ourService, theCompetition;
 	private CostAnalyserandPricer ourAnalyser, competitionAnalyser;
-	private boolean simulationisRunning = true;
 	private int completeUserCount = 0;
 
 	private void prepareIaaS(final IaaSService service) throws Exception {
@@ -154,7 +153,7 @@ public class TestPricing implements MultiCloudUser.CompletionCallback {
 		}
 	}
 
-	@Test // (timeout = 60000)
+	@Test(timeout = 60000)
 	public void thePricingTest() throws Exception {
 		Timed.simulateUntilLastEvent();
 		Assert.assertTrue(
